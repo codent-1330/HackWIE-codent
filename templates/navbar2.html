@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>A.T.A.C</title>
-  <link rel="icon" href="favicon.ico">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='styles/favicon.ico') }}">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css" />
+<!--  <link rel="stylesheet" href="styles.css" />-->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
   <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
 <div class="bar">
-  <a href="navbar2.html">
+    <a href="{{url_for('index')}}">
 <img  class="home-icon" src="https://www.flaticon.com/svg/static/icons/svg/846/846449.svg" alt="home icon" width="30" height="30" />
   <p class=atac >
     <b>A.T.A.C</b>
@@ -63,7 +64,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
 
-            <a class="nav-link" href="signup.html">Contact us</a></li></ul>
+            <a class="nav-link" href="{{url_for('signup')}}">Contact us</a></li></ul>
               <!-- <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
             <a class="navbar-brand logo " href=""><img class="sai" src="https://www.flaticon.com/svg/static/icons/svg/1946/1946488.svg" alt="girl" width="30" height="30"></a> -->
@@ -85,12 +86,12 @@
 
 
 
-          <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="signup.html">Sign up</a></button>
-        <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="login.html"> Login </a></button>
+          <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="{{url_for('signup')}}">Sign up</a></button>
+        <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="{{url_for('login')}}"> Login </a></button>
         </div>
-        <div class="col-6 ">
+        <div class="col-6">
           <center>
-            <img  class="circle" src="img.png" alt="iphone-mockup">
+            <img  class="circle" src="/img.png" alt="iphone-mockup">
           </center>
         </div>
       </div>
@@ -99,6 +100,7 @@
   <section id="blank">
     <h3>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </h3>
   </section>
 
 
@@ -107,25 +109,25 @@
 <div id="testimonial-carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover">
   <div class="carousel-inner">
 <div class="carousel-item active">
-<a class="nav-link" href="preventions.html"><h1 class=monial>Preventions</h1></a>
+<a class="nav-link" href="{{url_for('preventions')}}"><h1 class=monial>Preventions</h1></a>
 <br />
 <br />
 <img class="sai-pic" src="https://www.flaticon.com/svg/static/icons/svg/2599/2599564.svg" alt="girl" width="150" height="150">
     </div>
 <div class="carousel-item  ">
-    <a class="nav-link" href="symptoms.html"><h1 class=monial>Symptoms</h1></a>
+    <a class="nav-link" href="{{url_for('symptoms')}}"><h1 class=monial>Symptoms</h1></a>
     <br />
     <br />
 <img class="sai-pic" src="https://www.flaticon.com/svg/static/icons/svg/2599/2599588.svg" alt="girl" width="150" height="150">
   </div>
   <div class="carousel-item  ">
-      <a class="nav-link" href="treatments.html"><h1 class=monial>Treatments</h1></a>
+      <a class="nav-link" href="{{url_for('treatments')}}"><h1 class=monial>Treatments</h1></a>
       <br />
       <br />
   <img class="sai-pic" src="https://www.flaticon.com/svg/static/icons/svg/2599/2599618.svg" alt="girl" width="150" height="150">
     </div>
     <div class="carousel-item  ">
-        <a class="nav-link" href="coping.html"><h1 class=monial>Coping</h1></a>
+        <a class="nav-link" href="{{url_for('coping')}}"><h1 class=monial>Coping</h1></a>
         <br />
         <br />
     <img class="sai-pic" src="https://www.flaticon.com/svg/static/icons/svg/2599/2599615.svg" alt="girl" width="150" height="150">
@@ -137,6 +139,7 @@
   <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
     <span class="carousel-control-next-icon"></span>
   </a>
+</div>
   </section>
   <section class="foot">
     <center>

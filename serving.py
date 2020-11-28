@@ -1,7 +1,8 @@
 from flask import Flask
-from flask import render_template, request, url_for, redirect, session, make_response, flash
+from flask import render_template, request, url_for, redirect, session, send_from_directory
 import sqlite3 as lite
 import os
+
 
 from patient_form_details.general_details_positive import GeneralDetailsPositive
 from patient_form_details.general_details_negative import GeneralDetailsNegative
@@ -184,9 +185,13 @@ def symptoms():
 
 
 @app.route('/preventions')
-def prevent():
+def preventions():
 
 	return render_template('preventions.html')
+
+@app.route('/favicon.ico')
+def favicon():
+	return send_from_directory(os.path.join(app.root_path, 'static'))
 
 
 @app.route('/treatments')
@@ -196,7 +201,7 @@ def treatments():
 
 
 @app.route('/coping')
-def cope():
+def coping():
 
 	return render_template('coping.html')
 
