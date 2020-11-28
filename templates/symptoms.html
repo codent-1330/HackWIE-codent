@@ -1,37 +1,99 @@
-{% extends "navbar.html" %}
-{% block content %}
-<link rel="stylesheet" href="../static/coronacarecss.css">
-<body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>A.T.A.C</title>
+  <link rel="icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<div class="bar">
+  <a href="{{url_for('index')}}">
+<img  class="home-icon" src="https://www.flaticon.com/svg/static/icons/svg/846/846449.svg" alt="home icon" width="30" height="30" />
+  <button type="button" class="btn1 btn-outline-dark buu" ><a href="mailto:saishreyakumar342@gmail.com"></a>Contact us!</button>
+</a>
+</div>
+</head>
+ <body>
+<section id="title">
+
 <br>
 	<br>
-		<h1 style="text-align:center;">Symptoms of Covid 19</h1>
+		<h1 class="sym" style="text-align:center;">Symptoms of Covid 19</h1>
 		<br>
 		<br>
-		<p>COVID-19 affects different people in different ways. Infected people have had a wide range of symptoms reported – from mild symptoms to severe illness.</p>
-		<p>Symptoms may appear 2-14 days after exposure to the virus. People with these symptoms may have COVID-19:</p>
-		<ul>
-			<li>Fever or chills</li>
-			<li>Cough</li>
-			<li>Shortness of breath or difficulty in breathing</li>
-			<li>Fatigue</li>
-			<li>Muscle or body aches</li>
-			<li>Headache</li>
-			<li>New loss of taste or smell</li>
-			<li>Sore throat</li>
-			<li>Congestion or runny nose</li>
-			<li>Nausea or vomiting</li>
-			<li>Diarrhea</li>
-		</ul>
-		<p>Look for emergency warning signs for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately:</p>
-		<ul>
-			<li>Trouble breathing</li>
-			<li>Persistent pain or pressure in the chest</li>
-			<li>New confusion</li>
-			<li>Inability to wake or stay awake</li>
-			<li>Bluish lips or face</li>
-		</ul>
-		<p>Call your medical provider for any other symptoms that are severe or concerning to you.</p>
+		<center>
 
+<b>
+		<p class="para">COVID-19 affects different people in different ways. Infected people have had a wide range of symptoms reported – from mild symptoms to severe illness.</p>
+		<p class="para" >Symptoms may appear 2-14 days after exposure to the virus. People with these symptoms may have COVID-19:</p>
+</b>
+<br />
+		<!-- <ul class="para" text-align:center> -->
+		<p   class="para1" >
+
+
+			Fever or chills<br />
+			Cough<br />
+			Shortness of breath<br />
+			difficulty in breathing<br />
+			Fatigue<br />
+			Muscle or body aches<br />
+			Headache<br />
+			New loss of taste or smell<br />
+			Sore throat<br />
+			Congestion or runny nose<br />
+			Nausea or vomiting<br />
+			Diarrhea<br />
+			</p>
+
+		<hr />
+		<p class="para">Look for emergency warning signs for COVID-19. If someone is showing any of these signs, seek emergency medical care immediately:</p>
+<br />
+<br />
+
+
+		<ul class="para1 " text-align>
+
+
+
+		Trouble breathing<br />
+			Persistent pain <br />
+			 pressure in the chest<br />
+			New confusion<br />
+			Inability to wake or stay awake<br />
+			Bluish lips or face<br />
+
+		</ul>
+		<br />
+		<br />
+
+
+
+		<p class="para">Call your medical provider for any other symptoms that are severe or concerning to you.</p>
+	</center>
+	</section>
+	<center>
+				<p>© Copyright 2020 A.T.A.C</p>
+	</center>
 	</body>
 </html>
-{% endblock %}

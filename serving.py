@@ -1,7 +1,8 @@
 from flask import Flask
-from flask import render_template, request, url_for, redirect, session, make_response, flash
+from flask import render_template, request, url_for, redirect, session, send_from_directory
 import sqlite3 as lite
 import os
+
 
 from patient_form_details.general_details_positive import GeneralDetailsPositive
 from patient_form_details.general_details_negative import GeneralDetailsNegative
@@ -13,7 +14,7 @@ from patient_form_details.output_generation import OutputGeneration
 app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__file__))
 
-db_path = r"C:\Users\yaswanthi\Documents\GitHub\HackWIE-codent\database\patient.db"
+db_path = r"C:\Users\anjuv\Documents\HackWIE-codent\database\patient.db"
 
 con = lite.connect(db_path, check_same_thread=False)
 print("db connection successful")
@@ -177,6 +178,11 @@ def index():
 
 	return render_template('navbar2.html')
 
+@app.route('/main')
+def main():
+	
+	return render_template('main.html')
+
 
 @app.route('/symptoms')
 def symptoms():
@@ -184,9 +190,13 @@ def symptoms():
 
 
 @app.route('/preventions')
-def prevent():
+def preventions():
 
 	return render_template('preventions.html')
+
+@app.route('/favicon.ico')
+def favicon():
+	return send_from_directory(os.path.join(app.root_path, 'static'))
 
 
 @app.route('/treatments')
@@ -196,7 +206,7 @@ def treatments():
 
 
 @app.route('/coping')
-def cope():
+def coping():
 
 	return render_template('coping.html')
 
