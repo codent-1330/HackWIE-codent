@@ -125,7 +125,7 @@ class OutputGeneration:
     def calling_keras(self, path_of_retrieved_image):
         # self.new_keras_model()
         np.set_printoptions(suppress=True)
-        model = tensorflow.keras.models.load_model('C:/Users/anjuv/Document/HackWIE-codent/keras_model.h5')
+        model = tensorflow.keras.models.load_model('C:/Users/yaswanthi/Documents/Github/HackWIE-codent/keras_model.h5')
         # model.compile()
         img = load_img(path_of_retrieved_image)
         size = (224, 224)
