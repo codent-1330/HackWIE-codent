@@ -116,7 +116,7 @@ class OutputGeneration:
         print("Stored blob data into: ", filename, "\n")
 
     def read_blob_data(self):
-        session['photo_path'] = "C:/Users/anjuv/Document/HackWIE-codent/xray_images\\" + session['unique'] + ".jpeg"
+        session['photo_path'] = "C:/Users/anjuv/Documents/HackWIE-codent/xray_images\\" + session['unique'] + ".jpeg"
 
         self.write_to_file(self.img, session['photo_path'])
 
