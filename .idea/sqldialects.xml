@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/patient_form_details/general_details_positive.py" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/patient_form_details/login.py" dialect="GenericSQL" />
+  </component>
+</project>
