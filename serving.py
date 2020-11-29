@@ -10,6 +10,7 @@ from patient_form_details.medical_details import MedicalDetails
 from patient_form_details.code_generation import CodeGeneration
 from patient_form_details.xray_details import XrayDetails
 from patient_form_details.output_generation import OutputGeneration
+from patient_form_details.login import Login
 # from patient_form_details.session_for_unique_code import SessionForUniqueCode
 app = Flask(__name__)
 app_root = os.path.abspath(os.path.dirname(__file__))
@@ -194,9 +195,9 @@ def preventions():
 
 	return render_template('preventions.html')
 
-@app.route('/favicon.ico')
-def favicon():
-	return send_from_directory(os.path.join(app.root_path, 'static'))
+# @app.route('/favicon.ico')
+# def favicon():
+# 	return send_from_directory(os.path.join(app.root_path, 'static'))
 
 
 @app.route('/treatments')
@@ -217,10 +218,18 @@ def contact():
 	return render_template('contact.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
+	if request.method == "POST":
+		Login_details = Login(con)
+		Login_details.username_password_input()
 
-	return render_template('login.html')
+		return redirect(url_for('main'))
+
+	if request.method == "GET":
+		return render_template('login.html')
+
+
 
 
 @app.route('/signup')

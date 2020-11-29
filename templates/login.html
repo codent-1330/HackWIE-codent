@@ -42,14 +42,18 @@
             <!-- <form action="{{url_for('login')}}"> -->
             <br><br>
 
-            <form action="{{url_for('main')}}">
+            <form action="{{url_for('main')}}" method = "POST">
                 <label for="emailid">Email:</label>
                 <input type="text" id="emailid" name="emailid" value="" placeholder="name@email.com">
                 <br><br>
                 <label for="passid">Password:</label>
                 <input type="password" id="passid" name="passid" value="">
                 <br><br>
-                <input type="submit" value="Submit Form">
+<!--                <input type="submit" value="Submit Form">-->
+                <p>
+                <input class="btn btn-danger btn-lg" onclick="window.open('http://127.0.0.1:5000/main');"
+                           type="submit" value="Submit & Proceed"/>
+                </p>
             </form>
 
         </div>

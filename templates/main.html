@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>A.T.A.C</title>
-  <link rel="shortcut icon" href="{{ url_for('static', filename='styles/favicon.ico') }}">
+<!--  <link rel="shortcut icon" href="{{ url_for('static', filename='styles/favicon.ico') }}">-->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -47,7 +47,68 @@
 	}
 </style>
 
-<body>
+<body style="background-color:#008F9C;">
+
+  <!-- 1)symptoms
+  2)Preventions
+  3)Treatments
+  4)Coping
+  <a class="nav-link"  href="{{url_for('symptoms')}}">Symptoms</a>
+
+
+  1)contacts
+  2)login
+  3)sign up -->
+
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+
+        <a class="navbar-brand logo newfo" href=""><h1>A.T.A.C</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+
+            <a class="nav-link" href="{{url_for('signup')}}">Contact us</a></li></ul>
+              <!-- <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+            <a class="navbar-brand logo " href=""><img class="sai" src="https://www.flaticon.com/svg/static/icons/svg/1946/1946488.svg" alt="girl" width="30" height="30"></a> -->
+</li>
+</ul>
+        </div>
+
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div class="row ">
+        <div class="col-6 text">
+          <br />
+          
+
+
+
+
+          <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="{{url_for('menu_for_forms_positive')}}">Are you Corona
+			positive?</a></button>
+        <button type="button" class="btn btn-dark btn-lg download-button" ><a  href="{{url_for('menu_for_forms_negative')}}"> Do you want to take the
+			Covid test? </a></button>
+        </div>
+        <div class="col-6">
+          <center>
+            <img  class="circle" src="{{ url_for('static', filename='img.png') }}" alt="iphone-mockup">
+          </center>
+        </div>
+      </div>
+</div>
+  </section>
 <br><br><br><br>
 <div class="w3-show-inline-block">
 	<div class="w3-bar">
@@ -57,8 +118,7 @@
 			positive?</a>
 	</div>
 </div>
-<img class="img-responsive center-block paddingImg" src="{{ url_for('static', filename='logo (1).png') }}" alt="logo.png"
-	width="300" height="300">
+ <img  class="circle1" src="{{ url_for('static', filename='img.png') }}" alt="iphone-mockup" width = "300" height = "300">
 
 <div class="w3-show-inline-block">
 	<div class="w3-bar">
