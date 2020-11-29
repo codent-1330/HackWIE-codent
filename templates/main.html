@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <!--  <link rel="stylesheet" href="styles.css" />-->
-  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
   <link rel="stylesheet "href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
@@ -90,8 +90,7 @@
 
       <div class="row ">
         <div class="col-6 text">
-          <br />
-          
+          <br /><br><br>
 
 
 
@@ -109,24 +108,8 @@
       </div>
 </div>
   </section>
-<br><br><br><br>
-<div class="w3-show-inline-block">
-	<div class="w3-bar">
-		&emsp;&emsp;&emsp;&emsp;&emsp;
-		&emsp;&emsp;&emsp;&emsp;&emsp;
-		&emsp;&emsp;&emsp;&emsp;<a class="btn btn-danger btn-lg" href="{{url_for('menu_for_forms_positive')}}" role="button "style ="width : 400px ;height:50px;">Are you Corona
-			positive?</a>
-	</div>
-</div>
- <img  class="circle1" src="{{ url_for('static', filename='img.png') }}" alt="iphone-mockup" width = "300" height = "300">
 
-<div class="w3-show-inline-block">
-	<div class="w3-bar">
-		<a class="btn btn-danger btn-lg" href="{{url_for('menu_for_forms_negative')}}" role="button" style ="width : 400px ;height:50px;">Do you want to take the
-			Covid test?</a>
 
-	</div>
-</div>
 </body>
 </html>
 
