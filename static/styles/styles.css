@@ -11,6 +11,12 @@
 max-width:700px;
 margin:auto;
 }
+.con{
+  font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* color: black; */
+}
 .bar{
   height: 40px;
     width: 110%;
@@ -54,7 +60,7 @@ font-size: 2rem;
   color: black;
 }
 #borderimg {
-  border-image: url(border.png) 30 round;
+  border-image: url('border.png') 30 round;
 }
 .foot{
     padding: 7% 15%;
@@ -164,7 +170,8 @@ p{
   color: #ff4c68;
 }
 .container-fluid{
-  padding: 3% 15% 7%;
+  padding: 3% 15% ;
+  padding-bottom: 0%;
 }
 .navbar-brand{
   font-family: "Ubuntu";
@@ -182,21 +189,9 @@ p{
   margin:0% 20% 30% 30%;
   border-radius: 80%;
 }
-
-.cirlcle1{
-
- height: 100%
- width: 30%
-  margin:0% 20% 30% 30%;
+.circle1{
   border-radius: 80%;
 }
-
-label {
-  display: inline-block;
-  width: 140px;
-  text-align: left;
-}
-
 .nav-link{
   font-size:1.2rem;
 }
