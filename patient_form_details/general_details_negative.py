@@ -38,7 +38,7 @@ class GeneralDetailsNegative:
         cur = self.con.cursor()
 
         cur.execute(
-                "INSERT INTO general_details (unique_code,name,age,gender,phno,address,adhaar)VALUES (?,?,?,?,?,?,?)",
+                "INSERT INTO general_details (unique_code, name,age,gender,phno,address,adhaar)VALUES (?,?,?,?,?,?,?)",
                 (list_var['unique_code'], list_var['name'], list_var['age'], list_var['gender'],
                  list_var['phno'], list_var['address'], list_var['adhaar']
                  ))

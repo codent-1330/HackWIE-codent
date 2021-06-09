@@ -116,7 +116,7 @@ class OutputGeneration:
         print("Stored blob data into: ", filename, "\n")
 
     def read_blob_data(self):
-        session['photo_path'] = "C:\Users\anjuv\Documents\HackWIE-codent\xray_images\\" + session['unique'] + ".jpeg"
+        session['photo_path'] = "C:/Users/anjuv/Documents/HackWIE-codent/xray_images//" + session['unique'] + ".jpeg"
 
         self.write_to_file(self.img, session['photo_path'])
 
@@ -125,7 +125,7 @@ class OutputGeneration:
     def calling_keras(self, path_of_retrieved_image):
         # self.new_keras_model()
         np.set_printoptions(suppress=True)
-        model = tensorflow.keras.models.load_model('C:\Users\anjuv\Documents\HackWIE-codent\keras_model.h5')
+        model = tensorflow.keras.models.load_model('C:/Users/anjuv/Documents/HackWIE-codent/keras_model.h5')
         # model.compile()
         img = load_img(path_of_retrieved_image)
         size = (224, 224)
